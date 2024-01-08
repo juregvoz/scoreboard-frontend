@@ -1,3 +1,17 @@
 .App {
+  border-style: solid;
+  width: 300px;
+  margin: 10px;
+}
 
+.MatchStarter {
+  border-style: solid;
+  height: 100px;
+  margin: 10px;
+}
+
+.Scoreboard {
+  border-style: solid;
+  height: 200px;
+  margin: 10px;
 }
