@@ -1,6 +1,6 @@
 .App {
   border-style: solid;
-  width: 300px;
+  width: 500px;
   margin: 10px;
 }
 
@@ -8,10 +8,16 @@
   border-style: solid;
   height: 100px;
   margin: 10px;
+  padding: 10px;
+  display: "flex";
 }
 
 .Scoreboard {
   border-style: solid;
   height: 200px;
   margin: 10px;
+}
+
+.InputTeam {
+  margin-right: 5px;
 }
