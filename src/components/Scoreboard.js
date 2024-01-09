@@ -1,7 +1,16 @@
 import "../App.css";
+import MatchRow from "./MatchRow.js";
 
-function Scoreboard() {
-  return <div className="Scoreboard"></div>;
+function Scoreboard(props) {
+  return (
+    <div className="Scoreboard">
+      <ul className="UL">
+        {props.matches.map((match, index) => (
+          <MatchRow key={index} match={match} index={index} />
+        ))}
+      </ul>
+    </div>
+  );
 }
 
 export default Scoreboard;

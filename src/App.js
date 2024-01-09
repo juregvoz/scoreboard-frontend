@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <MatchStarter matches={matches} setMatches={setMatches} />
-      <Scoreboard />
+      <Scoreboard matches={matches} />
     </div>
   );
 }

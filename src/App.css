@@ -14,10 +14,22 @@
 
 .Scoreboard {
   border-style: solid;
-  height: 200px;
+  height: min-200px;
   margin: 10px;
 }
 
 .InputTeam {
   margin-right: 5px;
+}
+
+.UL {
+  margin: 2px;
+  padding: 2px;
+}
+
+.MatchRow {
+  border: 1px solid;
+  padding: 5px;
+  margin: 7px;
+  list-style-type: none;
 }

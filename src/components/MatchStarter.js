@@ -6,12 +6,18 @@ function MatchStarter(props) {
   const [homeTeam, setHomeTeam] = useState("");
   const [awayTeam, setAwayTeam] = useState("");
 
-  const handleClick = () => {
+  const startMatch = () => {
     if (homeTeam != "" && awayTeam != "") {
       var match = new Match(homeTeam, awayTeam);
       props.setMatches([...props.matches, match]);
       setHomeTeam("");
       setAwayTeam("");
+    }
+  };
+
+  const handleEnter = (e) => {
+    if (e.key === "Enter") {
+      startMatch();
     }
   };
 
@@ -32,8 +38,9 @@ function MatchStarter(props) {
           placeholder="Away Team"
           value={awayTeam}
           onChange={(e) => setAwayTeam(e.target.value)}
+          onKeyDown={handleEnter}
         ></input>
-        <button onClick={handleClick}>Start match</button>
+        <button onClick={startMatch}>Start match</button>
       </div>
     </div>
   );
