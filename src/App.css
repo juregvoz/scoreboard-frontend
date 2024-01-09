@@ -1,3 +1,15 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .App {
   border-style: solid;
   width: 500px;
@@ -29,7 +41,7 @@
 
 .MatchRow {
   border: 1px solid;
-  padding: 5px;
+  padding: 7px 10px;
   margin: 7px;
   list-style-type: none;
   display: flex;
@@ -37,4 +49,20 @@
 
 .Btn {
   margin-left: auto;
+  margin-right: 5px;
+}
+
+.Popup {
+  background-color: lightblue;
+  position: fixed;
+  left: 30px;
+  padding: 10px;
+  width: 444px;
+  border: 1px solid;
+  display: flex;
+}
+
+.ScoreInput {
+  width: 10px;
+  margin: auto;
 }
