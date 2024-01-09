@@ -6,7 +6,13 @@ function Scoreboard(props) {
     <div className="Scoreboard">
       <ul className="UL">
         {props.matches.map((match, index) => (
-          <MatchRow key={index} match={match} index={index} />
+          <MatchRow
+            key={index}
+            matches={props.matches}
+            setMatches={props.setMatches}
+            match={match}
+            index={index}
+          />
         ))}
       </ul>
     </div>
