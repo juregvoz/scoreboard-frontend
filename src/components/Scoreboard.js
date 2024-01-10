@@ -7,7 +7,6 @@ function Scoreboard(props) {
       <ul className="UL">
         {props.matches.map((match, index) => (
           <MatchRow
-            key={index}
             matches={props.matches}
             setMatches={props.setMatches}
             match={match}
