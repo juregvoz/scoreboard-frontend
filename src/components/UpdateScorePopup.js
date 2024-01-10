@@ -8,11 +8,13 @@ function UpdateScorePopup(props) {
   const [awayTeamScore, setAwayTeamScore] = useState("");
 
   const updateMatchScore = () => {
-    let matchList = [...props.matches];
-    matchList[props.index].homeTeamScore = homeTeamScore;
-    matchList[props.index].awayTeamScore = awayTeamScore;
-    props.setMatches(matchList);
-    props.closePopup();
+    if (homeTeamScore != "" && awayTeamScore != "") {
+      let matchList = [...props.matches];
+      matchList[props.index].homeTeamScore = homeTeamScore;
+      matchList[props.index].awayTeamScore = awayTeamScore;
+      props.setMatches(matchList);
+      props.closePopup();
+    }
   };
 
   const handleEnter = (e) => {
