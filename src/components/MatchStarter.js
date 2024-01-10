@@ -7,12 +7,29 @@ function MatchStarter(props) {
   const [awayTeam, setAwayTeam] = useState("");
 
   const startMatch = () => {
-    if (homeTeam != "" && awayTeam != "") {
-      var match = new Match(homeTeam, awayTeam);
-      props.setMatches([...props.matches, match]);
-      setHomeTeam("");
-      setAwayTeam("");
+    if (homeTeam != "" && awayTeam != "" && homeTeam != awayTeam) {
+      if (props.matches.length < 1) {
+        createNewMatch();
+      } else {
+        if (!props.matches.some((match) => checkTeamsAvailability(match))) {
+          createNewMatch();
+        }
+      }
     }
+  };
+
+  const checkTeamsAvailability = (match) => {
+    return (
+      [match.homeTeam, match.awayTeam].includes(homeTeam) ||
+      [match.homeTeam, match.awayTeam].includes(awayTeam)
+    );
+  };
+
+  const createNewMatch = () => {
+    var match = new Match(homeTeam, awayTeam);
+    props.setMatches([...props.matches, match]);
+    setHomeTeam("");
+    setAwayTeam("");
   };
 
   const handleEnter = (e) => {
