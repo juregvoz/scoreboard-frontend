@@ -8,7 +8,7 @@ function UpdateScorePopup(props) {
   const [awayTeamScore, setAwayTeamScore] = useState("");
 
   const updateMatchScore = () => {
-    if (homeTeamScore != "" && awayTeamScore != "") {
+    if (homeTeamScore !== "" && awayTeamScore !== "") {
       let matchList = [...props.matches];
       matchList[props.index].homeTeamScore = homeTeamScore;
       matchList[props.index].awayTeamScore = awayTeamScore;
