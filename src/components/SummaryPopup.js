@@ -17,11 +17,11 @@ function SummaryPopup(props) {
       <ul className="UL">
         {matchesCopy.map((match) => (
           <li className="SummaryRow">
-            <h3 className="SummaryText">
+            <h3 className="SummaryText Text">
               {match.homeTeam + " " + match.homeTeamScore}
             </h3>{" "}
-            <h3 className="SummaryText">{"-"}</h3>
-            <h3 className="SummaryText">
+            <h3 className="SummaryText Text">{"-"}</h3>
+            <h3 className="SummaryText Text">
               {match.awayTeam + " " + match.awayTeamScore}
             </h3>
           </li>

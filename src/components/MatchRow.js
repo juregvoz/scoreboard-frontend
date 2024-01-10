@@ -24,7 +24,7 @@ function MatchRow(props) {
 
   return (
     <li className="MatchRow">
-      <div>{result}</div>
+      <div className="Text Result">{result}</div>
 
       {isPopupOpen && (
         <UpdateScorePopup
@@ -35,11 +35,13 @@ function MatchRow(props) {
           closePopup={closePopup}
         />
       )}
-      <button className="Btn" onClick={openPopup}>
+      <button className="BtnUpdate Btn Text" onClick={openPopup}>
         Update score
       </button>
 
-      <button onClick={removeMatch}>End match</button>
+      <button className="Btn Text" onClick={removeMatch}>
+        End match
+      </button>
     </li>
   );
 }

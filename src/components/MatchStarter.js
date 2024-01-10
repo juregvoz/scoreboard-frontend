@@ -40,7 +40,7 @@ function MatchStarter(props) {
 
   return (
     <div className="MatchStarter">
-      <h3>Start a match</h3>
+      <h3 className="Text">Start a match</h3>
       <div>
         <input
           className="InputTeam"
@@ -57,7 +57,9 @@ function MatchStarter(props) {
           onChange={(e) => setAwayTeam(e.target.value)}
           onKeyDown={handleEnter}
         ></input>
-        <button onClick={startMatch}>Start match</button>
+        <button className="Btn Text" onClick={startMatch}>
+          Start match
+        </button>
       </div>
     </div>
   );

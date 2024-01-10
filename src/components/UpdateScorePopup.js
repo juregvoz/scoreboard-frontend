@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function UpdateScorePopup(props) {
-  const top = 170 + props.index * 44;
+  const top = 302 + props.index * 70;
   const topStyle = { top: top + "px" };
 
   const [homeTeamScore, setHomeTeamScore] = useState("");
@@ -25,7 +25,7 @@ function UpdateScorePopup(props) {
 
   return (
     <div className="UpdateScorePopup" style={topStyle}>
-      <div>{props.result}</div>
+      <div className="Result Text">{props.result}</div>
       <input
         className="ScoreInput"
         type="number"
@@ -39,10 +39,16 @@ function UpdateScorePopup(props) {
         onChange={(e) => setAwayTeamScore(e.target.valueAsNumber)}
         onKeyDown={handleEnter}
       />
-      <button className="Btn" onClick={updateMatchScore}>
+      <button
+        className="Btn BtnUpdateScorePopup Text"
+        onClick={updateMatchScore}
+      >
         Update
       </button>
-      <button className="Btn" onClick={props.closePopup}>
+      <button
+        className="Btn BtnUpdateScorePopup Text"
+        onClick={props.closePopup}
+      >
         Close
       </button>
     </div>

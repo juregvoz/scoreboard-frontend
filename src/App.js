@@ -15,10 +15,14 @@ function App() {
 
   return (
     <div className="App">
+      <img
+        src="https://sportradar.com/wp-content/uploads/2023/11/Sportradar-Brand-Line_Color_White.svg"
+        class="Img"
+      ></img>
       <MatchStarter matches={matches} setMatches={setMatches} />
       <Scoreboard matches={matches} setMatches={setMatches} />
       <div className="SummaryBtnDiv">
-        <button className="BtnSummary" onClick={openClosePopup}>
+        <button className="BtnSummary Btn Text" onClick={openClosePopup}>
           {isPopupOpen ? "Hide summary" : "Show summary"}
         </button>
         {isPopupOpen && <SummaryPopup matches={matches} />}
