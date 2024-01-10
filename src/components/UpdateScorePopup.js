@@ -15,8 +15,14 @@ function UpdateScorePopup(props) {
     props.closePopup();
   };
 
+  const handleEnter = (e) => {
+    if (e.key === "Enter") {
+      updateMatchScore();
+    }
+  };
+
   return (
-    <div className="Popup" style={topStyle}>
+    <div className="UpdateScorePopup" style={topStyle}>
       <div>{props.result}</div>
       <input
         className="ScoreInput"
@@ -29,6 +35,7 @@ function UpdateScorePopup(props) {
         type="number"
         value={awayTeamScore}
         onChange={(e) => setAwayTeamScore(e.target.valueAsNumber)}
+        onKeyDown={handleEnter}
       />
       <button className="Btn" onClick={updateMatchScore}>
         Update
